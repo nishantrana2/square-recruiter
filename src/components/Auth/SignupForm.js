@@ -251,11 +251,6 @@ const AuthForm = () => {
                 style={{ marginTop: "40px", marginBottom: "52px" }}
               >
                 <Button type="primary" fontSize={"16px"}>
-                  {/* {loading ? (
-                  <ClipLoader color={"#ffffff"} size={25} />
-                ) : (
-                  "Sign up"
-                )} */}
                   {"Signup"}
                 </Button>
               </Box>

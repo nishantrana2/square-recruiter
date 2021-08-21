@@ -14,7 +14,6 @@ const NewPasswordForm = () => {
 
   const auth = useContext(AuthContext);
 
-  const [isLogin, setIsLogin] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
   const [apiErr, setApiErr] = useState();
   const [apiMessage, setApiMessage] = useState();
@@ -155,7 +154,7 @@ const NewPasswordForm = () => {
                   type="password"
                   border={(apiErr || apiMessage) && "1px solid red"}
                 />
-                {/* {errors.message && errors.message.message} */}
+
                 {apiMessage && (
                   <Box type="row" flexDirection="row-reverse">
                     <Span type="error">{apiMessage}</Span>
@@ -165,14 +164,9 @@ const NewPasswordForm = () => {
               <Box
                 type="row"
                 justifyContent="center"
-                style={{ marginTop: "40px" }}
+                style={{ marginTop: "20px" }}
               >
-                <Button type="primary" fontSize={"16px"}>
-                  {/* {loading ? (
-                  <ClipLoader color={"#ffffff"} size={25} />
-                ) : (
-                  "Sign up"
-                )} */}
+                <Button type="noPost" fontSize={"16px"}>
                   {"Resets"}
                 </Button>
               </Box>

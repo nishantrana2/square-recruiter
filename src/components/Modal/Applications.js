@@ -54,9 +54,7 @@ export default function Applications({ open, setOpen, id }) {
           } else {
             return res.json().then((data) => {
               let errorMessage = "Authentication failed!";
-              // let errorMessage = "Authentication failed!";
-              // history.replace("/");
-              // auth.logout();
+
               throw new Error(errorMessage);
             });
           }

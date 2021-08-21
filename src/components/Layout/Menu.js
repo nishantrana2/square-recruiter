@@ -66,7 +66,6 @@ const MenuDrop = () => {
             {" "}
             Post a Job
           </Link>
-          {/* <Divider style={{ color: "blue" }} /> */}
         </Span>
       </Box>
       <Avatar style={{ backgroundColor: "#D9EFFF", color: "#303F60" }}>
@@ -76,6 +75,7 @@ const MenuDrop = () => {
         <ArrowDropDownIcon
           style={{
             color: "ffffff",
+            cursor: "pointer",
           }}
           ref={anchorRef}
           aria-controls={open ? "menu-list-grow" : undefined}

@@ -1,4 +1,4 @@
-import { useState, useRef, useContext } from "react";
+import { useState, useContext } from "react";
 import { useHistory, Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { Box, Button, Span, H6, Input, Label } from "../../styles";
@@ -13,14 +13,9 @@ const AuthForm = () => {
   } = useForm();
   const auth = useContext(AuthContext);
 
-  const [isLogin, setIsLogin] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
   const [apiErr, setApiErr] = useState();
   const [apiMessage, setApiMessage] = useState();
-
-  const switchAuthModeHandler = () => {
-    setIsLogin((prevState) => !prevState);
-  };
 
   const handleSignup = (params) => {
     setApiErr();
@@ -105,9 +100,8 @@ const AuthForm = () => {
                     required: "Required",
                   })}
                   border={(apiErr || apiMessage) && "1px solid red"}
-                  // type="email"
                 />
-                {/* {errors.message && errors.message.message} */}
+
                 {apiErr && (
                   <Box type="row" flexDirection="row-reverse">
                     <Span type="error">{apiErr.email}</Span>
@@ -131,7 +125,7 @@ const AuthForm = () => {
                   type="password"
                   border={(apiErr || apiMessage) && "1px solid red"}
                 />
-                {/* {errors.message && errors.message.message} */}
+
                 {apiMessage && (
                   <Box type="row" flexDirection="row-reverse">
                     <Span type="error">
@@ -147,11 +141,6 @@ const AuthForm = () => {
                 style={{ marginTop: "40px", marginBottom: "52px" }}
               >
                 <Button type="primary" fontSize={"16px"}>
-                  {/* {loading ? (
-                  <ClipLoader color={"#ffffff"} size={25} />
-                ) : (
-                  "Sign up"
-                )} */}
                   {"login"}
                 </Button>
               </Box>

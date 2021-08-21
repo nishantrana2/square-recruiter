@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Button, Span, H6 } from "../../styles";
+import { Box, Span } from "../../styles";
 import DescriptionIcon from "@material-ui/icons/Description";
 
 const EmptyPostCard = () => {

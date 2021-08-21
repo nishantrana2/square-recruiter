@@ -11,7 +11,12 @@ const ApplicationsCard = ({ app }) => {
         gridGap={[1]}
         width="100%"
       >
-        <Avatar style={{ backgroundColor: "#D9EFFF", color: "#303F60" }}>
+        <Avatar
+          style={{
+            backgroundColor: "#D9EFFF",
+            color: "#303F60",
+          }}
+        >
           {app.name[0].toUpperCase()}
         </Avatar>
         <Box type="column">

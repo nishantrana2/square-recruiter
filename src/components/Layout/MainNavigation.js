@@ -18,11 +18,13 @@ const MainNavigation = () => {
   return (
     <header>
       <Box type="row" px={8} style={{ padding: "0px 70px" }}>
-        <div>
-          <Span type="headOne">My</Span>
-          <Span type="headTwo">Jobs</Span>
-        </div>
-
+        <Link to="/" style={{ textDecoration: "none" }}>
+          {" "}
+          <div>
+            <Span type="headOne">My</Span>
+            <Span type="headTwo">Jobs</Span>
+          </div>
+        </Link>
         <Box>
           {!isLoggedIn ? (
             <Box py={"6px"}>
